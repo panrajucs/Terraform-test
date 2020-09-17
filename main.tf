@@ -34,7 +34,7 @@ resource "aws_instance" "web-1" {
     private_ip = "10.1.1.200"
     vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
     associate_public_ip_address = true	
-	user_data = "${file("script1.sh")}"
+    user_data = "${file("script1.sh")}"
     tags = {
         Name = "Docker-Master"
     }
@@ -42,16 +42,17 @@ resource "aws_instance" "web-1" {
 
 
 
-#resource "aws_instance" "web-2" {
-#   ami = "ami-04ca8bd9d49a3a026"
-#   availability_zone = "us-east-1a"
-#   instance_type = "t2.micro"
-#   key_name = "AWS_KeyPair"
-#   subnet_id = "subnet-034250c45e4a08fbf"
-#    vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
-#    associate_public_ip_address = true	
-#    tags = {
-#       Name = "Jenkins-Master"
-#   }
+resource "aws_instance" "web-2" {
+   ami = "ami-04ca8bd9d49a3a026"
+   availability_zone = "us-east-1a"
+   instance_type = "t2.micro"
+   key_name = "AWS_KeyPair"
+   subnet_id = "subnet-034250c45e4a08fbf"
+    vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
+    associate_public_ip_address = true	
+    user_data = "${file("script2.sh")}"
+    tags = {
+       Name = "Jenkins-Master"
+   }
 } 
 
