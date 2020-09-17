@@ -14,6 +14,7 @@ variable "vpc_id" {}
 variable "IGW_id" {}
 variable "key_name" {}
 variable "RT_ID" {}
+variable "vpc_security_group_id" {}
 variable "azs" {
   description = "Run the EC2 Instances in these Availability Zones"
   type = "list"
