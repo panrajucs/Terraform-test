@@ -39,6 +39,7 @@ resource "aws_instance" "web-1" {
     }
 } 
 
+
 #resource "aws_instance" "web-2" {
 #   ami = "ami-04ca8bd9d49a3a026"
 #   availability_zone = "us-east-1a"
@@ -51,3 +52,4 @@ resource "aws_instance" "web-1" {
 #       Name = "Jenkins-Master"
 #   }
 #} 
+
