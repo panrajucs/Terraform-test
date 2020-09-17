@@ -39,15 +39,15 @@ resource "aws_instance" "web-1" {
     }
 } 
 
-resource "aws_instance" "web-2" {
-    ami = "ami-04ca8bd9d49a3a026"
-    availability_zone = "us-east-1a"
-    instance_type = "t2.micro"
-    key_name = "AWS_KeyPair"
-    subnet_id = "sg-0345b0dad2fcfb397"
-    vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
-    associate_public_ip_address = true	
-    tags = {
-        Name = "Jenkins-Master"
-    }
-} 
+#resource "aws_instance" "web-2" {
+#   ami = "ami-04ca8bd9d49a3a026"
+#   availability_zone = "us-east-1a"
+#   instance_type = "t2.micro"
+#   key_name = "AWS_KeyPair"
+#   subnet_id = "sg-0345b0dad2fcfb397"
+#    vpc_security_group_ids = ["${aws_security_group.allow_all.id}"]
+#    associate_public_ip_address = true	
+#    tags = {
+#       Name = "Jenkins-Master"
+#   }
+#} 
