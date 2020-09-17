@@ -39,6 +39,8 @@ resource "aws_instance" "web-1" {
     }
 } 
 
+data "template_file" "user_data" {
+  template = "${file("templates/user_data.tpl")}"
 
 #resource "aws_instance" "web-2" {
 #   ami = "ami-04ca8bd9d49a3a026"
